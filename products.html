@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse 3D Printed Toys">
+    <title>Products - 3DPrintToys</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8eaf6; /* Light purple background */
+        }
+        header {
+            background-color: #4a47a3; /* Deep purple */
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 1.8rem;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        header nav ul li {
+            margin-left: 20px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        header nav ul li a:hover {
+            color: #b3b6f5; /* Light blue for hover effect */
+        }
+        #products {
+            padding: 2rem;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        #products h2 {
+            color: #3b6cc7; /* Medium blue for the section title */
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .products-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-card h3 {
+            color: #4a47a3; /* Deep purple for product title */
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        .product-card p {
+            color: #3b6cc7; /* Medium blue for price */
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .product-card button {
+            background-color: #3b6cc7; /* Blue button */
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .product-card button:hover {
+            background-color: #4a47a3; /* Change to purple on hover */
+        }
+        footer {
+            background-color: #4a47a3; /* Deep purple */
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>3DPrintToys</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="congressionalhomepage.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="products">
+        <h2>Our 3D Printed Toys</h2>
+        <div class="products-container">
+            <div class="product-card">
+                <img src="toy1.jpg" alt="3D Printed Toy 1">
+                <h3>Action Figure</h3>
+                <p>$5.99</p>
+                <button onclick="addToCart('Action Figure', 5.99)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="toy2.jpg" alt="3D Printed Toy 2">
+                <h3>Building Blocks</h3>
+                <p>$7.99</p>
+                <button onclick="addToCart('Building Blocks', 7.99)">Add to Cart</button>
+            </div>
+            <!-- More product cards -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 3DPrintToys Store. Affordable toys for every child.</p>
+    </footer>
+
+    <script>
+        function addToCart(productName, productPrice) {
+            alert(`${productName} added to cart`);
+        }
+    </script>
+</body>
+</html>
