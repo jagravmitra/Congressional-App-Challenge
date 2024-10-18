@@ -42,3 +42,73 @@ body {
         button:hover {
             background-color: #4cae4c;
         }
+
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .hero {
+            height: 80vh;
+            background: url('https://example.com/banner-image.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        .hero .cta {
+            display: flex;
+            gap: 20px;
+        }
+        .cta a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .cta a:hover {
+            background-color: #e64a19;
+        }
+        .main-content {
+            padding: 50px;
+            text-align: center;
+        }
