@@ -4,22 +4,112 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="3D Printed Toys Store - Affordable and sustainable toys for kids in need.">
       <title>3D Printing Toys Store</title>
-      <link rel="stylesheet" href="style.css">
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .headerthingy {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .headerthingy h1 {
+            font-size: 3rem;
+            margin: 0;
+            background-color: #ff5722;
+            border-radius: 5px; 
+        }
+        .headerthingy p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            background-color: #ff5722;
+            border-radius: 5px; 
+        }
+        .headerthingy .userbutton {
+            display: flex;
+            gap: 20px;
+        }
+        .userbutton a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .userbutton a:hover {
+            background-color: #e64a19;
+        }
+        .main-content {
+            padding: 50px;
+            text-align: center;
+            background-color: #ff5722;
+            border-radius: 25px; 
+        }
+    </style>
     </head>
     <body>
       <header>
-        <div class = "logo">
+        <div class = "logo">3DToys</div>
           <h1>3D Printing Toys</h1>
         </div>
         <nav>
+
           <ul>
             <li><a href = "products.html">Products</a></li>
             <li><a href = "cart.html">Cart</a></li>
             <li><a href = "checkout.html">Checkout</a></li>
             <li><a href = "Login-Page.html">Login Page</a></li>
+            <li><a href="#">Upload Design</a></li>
           </ul>
         </nav>
       </header>
+      <section class="headerthingy">
+        <h1>Share. Discover. Print.</h1>
+        <p>A community-driven platform to explore, shae, and create stunning 3D printer designs</p>
+        <p>3D prints are avalible for a price</p>
+        <div class="userbutton">
+            <a href="#">Explore/Print Designs</a>
+            <a href="#">Upload Your Design</a>
+        </div>
+      </section>
+      <section class="main-content">
+          <h2>Why 3DShare?</h2>
+          <p>Join thousands of makers sharing unique and exciting 3D designs. Get inspiration, share your creations, and take part in an ever-growing community of 3D printing enthusiasts!</p>
+      </section>
       
     </body>
   </html>
