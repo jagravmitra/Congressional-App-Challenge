@@ -84,7 +84,7 @@
 
 <div class="login-container">
     <h2>Login</h2>
-    <form action="/login" method="post">
+    <form id="loginForm">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
@@ -98,9 +98,21 @@
 
     <div class="signup-section">
         <p>Are you new? Sign up to create an account.</p>
-        <button onclick="Signup.html">Sign Up</button>
+        <a href="Signup.html">
+            <button>Sign Up</button>
+        </a>
     </div>
 </div>
+
+<script>
+    // Handle form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent actual form submission
+
+        // Redirect to homepage
+        window.location.href = 'congressionalhomepage.html';
+    });
+</script>
 
 </body>
 </html>
