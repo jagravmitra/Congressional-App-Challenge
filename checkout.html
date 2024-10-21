@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Checkout for your 3D printed toys">
+    <meta name="description" content="Checkout page for your cart of 3D printed toys">
     <title>Checkout - 3DPrintToys</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #eaeaea;
+            background-color: #f5f5f5;
         }
         header {
             background-color: #4a47a3;
@@ -37,32 +37,31 @@
             margin: 2rem;
             border-radius: 10px;
         }
-        form label {
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        form input {
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-            width: 100%;
-            max-width: 400px;
-        }
-        button {
+        .cta-button {
             padding: 0.5rem 1rem;
             background-color: #3b6cc7;
             color: white;
-            border: none;
-            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #4a47a3;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-  <header>
-    <div class = "logo">
-      <h1>3DPrintToys</h1>
-    </div>
-    <nav>
-        <ul>
+    <header>
+        <div class="logo">
+            <h1>3DPrintToys</h1>
+        </div>
+        <nav>
+            <ul>
                 <li><a href="congressionalhomepage.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="cart.html">Cart</a></li>
@@ -72,20 +71,20 @@
 
     <section id="checkout">
         <h2>Checkout</h2>
-        <form>
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="address">Shipping Address:</label>
-            <input type="text" id="address" name="address" required>
-
-            <label for="card">Credit Card Info:</label>
-            <input type="text" id="card" name="card" required>
-            
-            <br>
-
-            <button type="submit">Place Order</button>
-        </form>
+        <p>Your total is: $<span id="checkout-total">0.00</span></p>
+        <a href="purchase.html" class="cta-button">Complete Purchase</a>
     </section>
+
+    <footer>
+        <p>&copy; 2024 3DPrintToys Store. Affordable toys for every child.</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            // Get total price from local storage
+            const totalPrice = localStorage.getItem('totalPrice') || '0.00';
+            document.getElementById('checkout-total').textContent = totalPrice;
+        }
+    </script>
 </body>
 </html>
