@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color:lightblue;
+            background: linear-gradient(135deg, #4a47a3, #3b6cc7); /* Blue and purple gradient background */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -16,15 +16,16 @@
         }
         .login-container {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 25px;
+            border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 500px;
-      		height:300px;
+            width: 450px;
+            max-width: 90%;
+            text-align: center;
         }
         h2 {
-            text-align: center;
-            color: #333;
+            color: #4a47a3; /* Purple title */
+            margin-bottom: 20px;
         }
         .form-group {
             margin-bottom: 15px;
@@ -32,29 +33,50 @@
         label {
             display: block;
             margin-bottom: 5px;
-            color: #555;
+            color: #333;
+            font-size: 1rem;
         }
         input[type="text"],
         input[type="password"] {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 8px;
             box-sizing: border-box;
+            margin-bottom: 15px;
+            font-size: 1rem;
         }
         button {
             width: 100%;
-            padding: 10px;
-            background-color: #007bff;
+            padding: 12px;
+            background-color: #3b6cc7; /* Blue button */
             border: none;
             color: white;
-            border-radius: 100px;
+            border-radius: 30px;
             cursor: pointer;
-            font-size: 16px;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #4a47a3; /* Purple hover effect */
+        }
+        .signup-section {
+            margin-top: 20px;
+            background-color: #f0f0f5;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .signup-section p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        .signup-section button {
+            background-color: #4a47a3; /* Purple button for signup */
+        }
+        .signup-section button:hover {
+            background-color: #3b6cc7; /* Blue hover effect */
         }
     </style>
 </head>
@@ -72,8 +94,12 @@
             <input type="password" id="password" name="password" required>
         </div>
         <button type="submit">Login</button>
-        <button onclick="location.href='legindesigner.html';">Designers Login</button>
     </form>
+
+    <div class="signup-section">
+        <p>Are you new? Sign up to create an account.</p>
+        <button onclick="Signup.html">Sign Up</button>
+    </div>
 </div>
 
 </body>
