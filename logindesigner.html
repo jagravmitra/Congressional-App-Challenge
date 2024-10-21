@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color:lightblue;
+            background-color: lightblue;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,7 +20,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             width: 500px;
-      		height:400px;
+            height: 400px;
         }
         h2 {
             text-align: center;
@@ -50,7 +50,8 @@
             color: white;
             border-radius: 100px;
             cursor: pointer;
-            font-size: 16px;        }
+            font-size: 16px;
+        }
         button:hover {
             background-color: #0056b3;
         }
@@ -60,7 +61,7 @@
 
 <div class="login-container">
     <h2>Login</h2>
-    <form action="/login" method="post">
+    <form id="loginForm">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
@@ -70,13 +71,22 @@
             <input type="password" id="password" name="password" required>
         </div>
         <button type="submit">Login</button>
-         <div class="signup-section">
-        <p>Are you new? Sign up to create an account.</p>
-        <button onclick="Signup.html">Sign Up</button>
+        <div class="signup-section">
+            <p>Are you new? Sign up to create an account.</p>
+            <button type="button" onclick="location.href='Signup.html';">Sign Up</button>
         </div>
     </form>
 </div>
 
+<script>
+    // Handle form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent actual form submission
+
+        // Redirect to homepage
+        window.location.href = 'congressionalhomepage.html';
+    });
+</script>
+
 </body>
 </html>
-
